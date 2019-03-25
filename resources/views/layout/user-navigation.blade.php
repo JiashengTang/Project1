@@ -47,7 +47,7 @@
 		<link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/toastr/build/toastr.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/jstree/dist/themes/default/style.css')}}" rel="stylesheet" type="text/css" />
-<!-- 		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" />
+ 		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/socicon/css/socicon.css')}}" rel="stylesheet" type="text/css" />
@@ -60,7 +60,7 @@
 
 		<!--begin::Global Theme Styles -->
 		<link href="{{asset('resources/theme/metronic/assets/demo/base/style.bundle.css')}}" rel="stylesheet" type="text/css" />
-
+		<link href="{{asset('resources/theme/metronic/assets/vendors/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles -->
 
 		<!--begin::Page Vendors Styles -->
@@ -267,7 +267,7 @@
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/base/bootstrap-notify.init.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/toastr/build/toastr.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/jstree/dist/jstree.js')}}" type="text/javascript"></script>
-<!-- 		<script src="{{asset('resources/theme/metronic/vendors/raphael/raphael.js')}}" type="text/javascript"></script>
+ 		<script src="{{asset('resources/theme/metronic/vendors/raphael/raphael.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/morris.js/morris.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/chart.js/dist/Chart.bundle.js')}}" type="text/javascript"></script>
@@ -284,7 +284,7 @@
 
 		<!--begin::Global Theme Bundle -->
 		<script src="{{asset('resources/theme/metronic/assets/demo/base/scripts.bundle.js')}}" type="text/javascript"></script>
-
+		<script src="{{asset('resources/theme/metronic/assets/vendors/custom/datatables/datatables.bundle.js')}}" type="text/javascript"></script>
 		<!--end::Global Theme Bundle -->
 
 		<!--begin::Page Vendors -->

@@ -35,19 +35,15 @@
                   <div class="m-form__section m-form__section--first">
                   	<div class="form-group m-form__group row">
                         <label class="col-lg-2 col-form-label">Choose skill:</label>
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                            <select class="form-control m-input m-input--square" name="skill-id">
                            	@foreach ($skills as $skill)
                     	 		   <option value="{{$skill->id}}">{{$skill['name']}}</option>
 							        @endforeach
                            </select>
                         </div>
+                        <button id="submit-btn" type="submit" class="btn btn-primary">Add Skill</button>
                      </div>  
-                  </div>
-               </div>
-               <div class="m-portlet__foot m-portlet__foot--fit">
-                  <div class="m-form__actions">
-                     <button id="submit-btn" type="submit" class="btn btn-primary">Add</button>
                   </div>
                </div>
             </form>
@@ -69,7 +65,7 @@
                </div>
             </div>
             <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="course-table">
+            <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
                <thead>
                   <tr>
                      <th>Name</th>
@@ -102,4 +98,27 @@
 @endsection
 
 @section('script')
+<script type="text/javascript">
+var DatatablesColumnRendering = function() {
+    var initActivityTable = function() {
+        var table = $('#skill-table');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            pageLength: 10,
+            order: [3, 'desc']
+        });
+    };
+
+    return {
+        init: function() {
+            initActivityTable();
+        },
+    };
+}();
+
+jQuery(document).ready(function() {
+    DatatablesColumnRendering.init();
+});
+</script>
 @endsection

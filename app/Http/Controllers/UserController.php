@@ -83,7 +83,7 @@ class UserController extends Controller{
 
 	public function showMissionPage(){
 		$user = User::where('id',Session::get('user')[0]->id)->first();
-		return view('user.mission')->with('missions',$user->missions);
+		return view('user.mission')->with('missions',$user->missions()->where('activated', '1')->get())->with('histories',$user->missions()->where('activated', '0')->get());
 	}
 
 	public function showCreateMissionPage(){
@@ -107,6 +107,14 @@ class UserController extends Controller{
 		$newMission->created_at = date('Y-m-d H:i:s');
 		$newMission->updated_at = date('Y-m-d H:i:s');
 		$newMission->save();
+		return redirect('/missions');
+	}
+
+	public function deleteMission($missionId){
+		$user = User::where('id',Session::get('user')[0]->id)->first();
+		$mission = Mission::where('id',$missionId)->first();
+		$mission->skills()->detach();
+		$mission->update(['activated' => '0']);
 		return redirect('/missions');
 	}
 

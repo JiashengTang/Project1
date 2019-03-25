@@ -10,9 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-	return redirect('/login');
-});
+
+// Route::get('/', function () {
+// 	return redirect('/login');
+// });
 Route::get('/login', function () {
 	if (isset(\Session::get('student')[0])){
 		return redirect('/home');
@@ -34,6 +35,7 @@ Route::group(['middleware' => ['web','login']], function () {
 	Route::get('/missions', 'UserController@showMissionPage');
 	Route::get('/missions/create', 'UserController@showCreateMissionPage');
 	Route::post('/missions/create', 'UserController@createMission');
+	Route::get('/missions/delete/{missionId}', 'UserController@deleteMission');
 	
 });
 

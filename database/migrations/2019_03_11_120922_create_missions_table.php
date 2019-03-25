@@ -21,6 +21,7 @@ class CreateMissionsTable extends Migration
             $table->string('description', 255)->nullable();
             $table->string('paymnent_type', 100);
             $table->double('price');
+            $table->boolean('activated');
             $table->date('start_time');
             $table->date('end_time')->nullable();
             $table->timestamps();
