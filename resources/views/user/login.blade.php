@@ -116,14 +116,14 @@
 									</div>
 								@endif							
 								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="email" placeholder="Email" name="email" autocomplete="on">
+									<input class="form-control m-input" type="email" placeholder="Email" name="email" autocomplete="on" required>
 								</div>						
 								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="password" placeholder="Password" name="password">
+									<input class="form-control m-input" type="password" placeholder="Password" name="password" required>
 								</div>								
 								<div class="m-login__form-action">
 									<button id="m_login_signin_submit" class="btn m-btn--pill m-btn--air btn-danger">Login</button>
-									<a href="{{url('/registe')}}" class="btn m-btn--pill m-btn--air btn-danger">Registe</a>
+									<a href="{{url('/register')}}" class="btn m-btn--pill m-btn--air btn-danger">Register</a>
 								</div>	
 							</form>
 						</div>

@@ -18,7 +18,7 @@ class UserController extends Controller{
 		$input = Input::all();
     	$user = User::where('email', $input['email'])->first();
     	if(!$user){
-      	 	return view('user.login')->with('errorMsg', "Can not find this account, please registe first");
+      	 	return view('user.login')->with('errorMsg', "Can not find this account, please regist first");
        	}
        	else if($user->activated == 0){
 			return view('user.login')->with('errorMsg', "Sorry this account has been deactivited, please connect the manager");
@@ -33,11 +33,14 @@ class UserController extends Controller{
        	
 	}
 
-	public function  userRegiste(){
+	public function  userRegister(){
 		$input = Input::all();
 		$user = User::where('email',$input['email'])->first();
 		if($user){
-			return view('registe')->with('errorMsg', 'This email has been used, please use another one');
+			return view('user.register')->with('errorMsg', 'This email has been used, please use another one');
+		}
+		else if($input['password'] != $input['password']){
+			return view('user.register')->with('errorMsg', 'Comfirm password wrong.');
 		}
 
 		$newUser = new User;
@@ -50,7 +53,7 @@ class UserController extends Controller{
 		$newUser->updated_at = date('Y-m-d H:i:s');
 		$newUser->save();
 
-		return view('user.registe')->with('successMsg', 'Registe successful, please login in.');;
+		return view('user.register')->with('successMsg', 'Registed successful, please login in.');;
 	}
 
 	public function userLogOut(){

@@ -25,7 +25,7 @@ Route::get('/registe', function () {
     return view('user.registe');
 });
 Route::post('/login', 'UserController@userLogin');
-Route::post('/registe', 'UserController@userRegiste');
+Route::post('/register', 'UserController@userRegister');
 
 Route::group(['middleware' => ['web','login']], function () {
 	Route::get('/logout', 'UserController@userLogOut');
