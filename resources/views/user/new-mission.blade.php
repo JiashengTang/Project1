@@ -43,7 +43,7 @@
                         <label class="col-lg-2 col-form-label">*Paymnent type:</label>
                         <div class="col-lg-6">
                            <select class="form-control m-input m-input--square" name="paymnent-type">
-                              <option value="Once">Once</option>
+                              <option value="Once" selected="selected">Once</option>
                               <option value="Hour">Hour</option>
                               <option value="Daily">Daily</option>
                            </select>
@@ -52,13 +52,13 @@
                      <div class="form-group m-form__group row">
                         <label class="col-lg-2 col-form-label">*Price:</label>
                         <div class="col-lg-6">
-                           <input class="form-control" type="number" step="0.01" name="price"></input>
+                           <input class="form-control" type="number" step="0.01" name="price" required></input>
                         </div>
                      </div>                                       
                      <div class="form-group m-form__group row">
-                        <label class="col-lg-2 col-form-label">Start Time:</label>
+                        <label class="col-lg-2 col-form-label">*Start Time:</label>
                         <div class="col-lg-6">
-                           <input type="text" class="form-control" id="start-time" name="start-time" placeholder="Select start date and time" >
+                           <input type="text" class="form-control" id="start-time" name="start-time" placeholder="Select start date and time" required>
                         </div>
                      </div>       
                      <div class="form-group m-form__group row">

@@ -55,7 +55,7 @@
                   </tr>
                </thead>
                <tbody>
-                  @foreach($missions as $mission)
+                  @foreach(Session::get('user')[0]->missions()->where('activated', '1')->get() as $mission)
                   <tr>
                      <td>{{$mission->title}}</td>
                      <td>{{$mission->description}}</td>
@@ -65,6 +65,9 @@
                      <td>{{$mission->end_time}}</td>
                      <td>{{$mission->created_at}}</td>
                      <td nowrap>
+                        <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <i class="la la-trash">Detail</i>
+                        </a>
                         <a href="{{url('/missions/delete/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
                         <i class="la la-trash">Delete</i>
                         </a>
@@ -89,18 +92,6 @@
                      </h3>
                   </div>
                </div>
-               <div class="m-portlet__head-tools">
-                  <ul class="m-portlet__nav">
-                    <li class="m-portlet__nav-item">
-                      <a href="{{url('/missions/create')}}" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
-                        <span>
-                          <i class="la la-plus"></i>
-                          <span>New Mission</span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>   
             </div>  
             <!--begin::Table-->
             <table class="table table-striped table-bordered table-hover table-checkable" id="history-table">
@@ -117,7 +108,7 @@
                   </tr>
                </thead>
                <tbody>
-                  @foreach($histories as $history)
+                  @foreach(Session::get('user')[0]->missions()->where('activated', '0')->get() as $history)
                   <tr>
                      <td>{{$history->title}}</td>
                      <td>{{$history->description}}</td>
@@ -127,7 +118,7 @@
                      <td>{{$history->end_time}}</td>
                      <td>{{$history->created_at}}</td>
                      <td nowrap>
-                        <a href="{{url('/missions/reactive/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <a href="{{url('/missions/reactive/' . $history->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
                         <i class="la la-trash">Reactive</i>
                         </a>
                      </td>

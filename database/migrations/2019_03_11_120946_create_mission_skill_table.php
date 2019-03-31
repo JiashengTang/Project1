@@ -16,7 +16,7 @@ class CreateMissionSkillTable extends Migration
         Schema::create('mission_skill', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->integer('mission_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('mission_id')->references('id')->on('missions')->onDelete('cascade');
             $table->integer('skill_id')->unsigned()->index();
             $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
             $table->timestamps();

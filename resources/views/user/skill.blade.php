@@ -39,7 +39,7 @@
                            <select class="form-control m-input m-input--square" name="skill-id">
                            	@foreach ($skills as $skill)
                     	 		   <option value="{{$skill->id}}">{{$skill['name']}}</option>
-							        @endforeach
+							              @endforeach
                            </select>
                         </div>
                         <button id="submit-btn" type="submit" class="btn btn-primary">Add Skill</button>

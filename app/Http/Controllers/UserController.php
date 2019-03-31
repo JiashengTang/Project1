@@ -75,15 +75,27 @@ class UserController extends Controller{
 		return redirect('/skills');
 	}
 
+	public function linkSkill($missionId){
+		$input = Input::all();
+		$mission = Mission::where('id',$missionId)->first();
+		$mission->skills()->attach($input['skill-id']);
+		return redirect('/missions/detail/'.$missionId);
+	}
+
 	public function deleteSkill($skillId){
 		$user = User::where('id',Session::get('user')[0]->id)->first();
 		$user->skills()->detach($skillId);
 		return redirect('/skills');
 	}
 
+	public function unlinkSkill($missionId,$skillId){
+		$mission = Mission::where('id',$missionId)->first();
+		$mission->skills()->detach($skillId);
+		return redirect('/missions/detail/'.$missionId);
+	}
+
 	public function showMissionPage(){
-		$user = User::where('id',Session::get('user')[0]->id)->first();
-		return view('user.mission')->with('missions',$user->missions()->where('activated', '1')->get())->with('histories',$user->missions()->where('activated', '0')->get());
+		return view('user.mission');
 	}
 
 	public function showCreateMissionPage(){
@@ -104,6 +116,7 @@ class UserController extends Controller{
 		if (isset($input['end-time'])){
 			$newMission->end_time = date('Y-m-d H:i', strtotime($input['end-time']));
 		}
+		$newMission->activated = 1;
 		$newMission->created_at = date('Y-m-d H:i:s');
 		$newMission->updated_at = date('Y-m-d H:i:s');
 		$newMission->save();
@@ -116,6 +129,18 @@ class UserController extends Controller{
 		$mission->skills()->detach();
 		$mission->update(['activated' => '0']);
 		return redirect('/missions');
+	}
+
+	public function reactiveMission($missionId){
+		$user = User::where('id',Session::get('user')[0]->id)->first();
+		$mission = Mission::where('id',$missionId)->first()->update(['activated' => '1']);
+		return redirect('/missions');
+	}
+
+	public function showMissionDetailPage($missionId){
+		$skills = Skill::All();
+		$mission = Mission::where('id',$missionId)->first();
+		return view('user.mission-detail')->with('mission',$mission)->with('skills',$skills);
 	}
 
 	

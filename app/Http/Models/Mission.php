@@ -23,6 +23,6 @@ class Mission extends Model
 
     public function skills()
     {
-        return $this->belongsToMany('App\Http\Models\Mission', 'mission_skill', 'mission_id', 'skill_id');
+        return $this->belongsToMany('App\Http\Models\Skill', 'mission_skill', 'mission_id', 'skill_id');
     }
 }

@@ -27,4 +27,7 @@ class SettingController extends Controller{
 		print_r('done');
 		die();
 	}
+
+	public function test(){
+	}
 }
