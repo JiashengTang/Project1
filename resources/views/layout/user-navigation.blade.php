@@ -115,8 +115,10 @@
 										<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
 											<li class="m-menu__item"><a id="my-courses-btn" href="{{url('/home')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-analytics"></i><span class="m-menu__link-text">Home</span></a>
 											</li>
-											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Skill</span></a>
-											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Mission</span></a>
+											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Skills</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Missions</span></a>
+											</li>
+											<li class="m-menu__item"><a href="{{url('/missions/search')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">Find Missions</span></a>
 											</li>					
 										</ul>
 									</div>

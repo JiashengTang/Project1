@@ -24,8 +24,8 @@ class UserController extends Controller{
 			return view('user.login')->with('errorMsg', "Sorry this account has been deactivited, please connect the manager");
        	}
        	else if(Hash::check($input['password'],$user->password)){
-			$request->session()->push('user', $user);
-   			return view('user.home');
+    			$request->session()->push('user', $user);
+   				return redirect('/');
    		}
    		else{
 			return view('user.login')->with('errorMsg', "Invalid email or password, please try again");
@@ -58,6 +58,7 @@ class UserController extends Controller{
 
 	public function userLogOut(){
 		session(['user'=>null]);
+		\Auth::logout();
 		return redirect('/login');
 	}
 
@@ -146,7 +147,34 @@ class UserController extends Controller{
 		return view('user.mission-detail')->with('mission',$mission)->with('skills',$skills);
 	}
 
-	
+	public function showMissionSearchPage(){
+		$skills = Skill::All();
+		return view('user.mission-search')->with('skills',$skills);
+	}
+
+	public function showMissionSearchResultPage(){
+		$input = Input::all();
+		$missions = Mission::where(function ($query) use($input) {
+			$keywords = $input['keyword'];
+			if(isset($keywords)){
+				foreach(explode(" ",$keywords) as $keyword) {
+					$query->orWhere('description', 'like', '%' . $keyword . '%');
+				}
+			}
+	    })
+	    ->whereHas('skills',function($query) use($input) {
+			$skillIds = $input['skill'];
+            if(isset($skillIds)){
+            	foreach(explode(" ",$skillIds) as $skillId) {
+                	$query->where("skill_id",$skillId);
+				}
+            }
+
+        })
+	    ->get();
+	    return view('user.mission-search-result')->with('missions',$missions);
+	}
+
 	
 
 }

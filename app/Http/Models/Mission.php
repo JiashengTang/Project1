@@ -25,4 +25,8 @@ class Mission extends Model
     {
         return $this->belongsToMany('App\Http\Models\Skill', 'mission_skill', 'mission_id', 'skill_id');
     }
+
+    public function hasSkill($user) {
+        return $project->users->contains($user);
+    }
 }
