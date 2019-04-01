@@ -11,28 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-	return redirect('/login');
-});
-
 Route::get('/login', function () {
-	if (isset(\Session::get('student')[0])){
-		return redirect('/home');
-	}
-    return view('user.login');
-});
-Route::get('/registe', function () {
-    return view('user.registe');
+	return view('user.login');
 });
 Route::post('/login', 'UserController@userLogin');
+Route::get('/register', function () {
+    return view('user.register');
+});
 Route::post('/register', 'UserController@userRegister');
 
 Route::group(['middleware' => ['web','login']], function () {
+	
+	Route::get('/', 'UserController@showHomePage');
 	Route::get('/logout', 'UserController@userLogOut');
-	Route::get('/home', 'UserController@showHomePage');
+
+
 	Route::get('/skills', 'UserController@showSkillPage');
 	Route::post('/skills/add', 'UserController@addSkill');
 	Route::get('/skills/delete/{skillId}', 'UserController@deleteSkill');
+
+
 	Route::get('/missions', 'UserController@showMissionPage');
 	Route::get('/missions/create', 'UserController@showCreateMissionPage');
 	Route::post('/missions/create', 'UserController@createMission');
@@ -41,7 +39,10 @@ Route::group(['middleware' => ['web','login']], function () {
 	Route::get('/missions/detail/{missionId}', 'UserController@showMissionDetailPage');
 	Route::post('/missions/skills/link/{missionId}', 'UserController@linkSkill');
 	Route::get('/missions/skills/unlink/{missionId}/{skillId}', 'UserController@unlinkSkill');
-	
+
+	Route::get('/missions/search', 'UserController@showMissionSearchPage');
+	Route::post('/missions/search', 'UserController@showMissionSearchResultPage');
+
 });
 
 
