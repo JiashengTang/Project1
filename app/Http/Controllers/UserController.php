@@ -39,7 +39,7 @@ class UserController extends Controller{
 		if($user){
 			return view('user.register')->with('errorMsg', 'This email has been used, please use another one');
 		}
-		else if($input['password'] != $input['password']){
+		else if($input['password'] != $input['confirm-password']){
 			return view('user.register')->with('errorMsg', 'Comfirm password wrong.');
 		}
 
@@ -131,13 +131,13 @@ class UserController extends Controller{
 		$user = User::where('id',Session::get('user')[0]->id)->first();
 		$mission = Mission::where('id',$missionId)->first();
 		$mission->skills()->detach();
-		$mission->update(['activated' => '0']);
+		$mission->update(['activated' => 0]);
 		return redirect('/missions');
 	}
 
 	public function reactiveMission($missionId){
 		$user = User::where('id',Session::get('user')[0]->id)->first();
-		$mission = Mission::where('id',$missionId)->first()->update(['activated' => '1']);
+		$mission = Mission::where('id',$missionId)->first()->update(['activated' => 1]);
 		return redirect('/missions');
 	}
 
@@ -154,23 +154,28 @@ class UserController extends Controller{
 
 	public function showMissionSearchResultPage(){
 		$input = Input::all();
-		$missions = Mission::where(function ($query) use($input) {
-			$keywords = $input['keyword'];
+		$keywords = $input['keyword'];
+		$skillIds = $input['skill'];
+
+		if(is_null($keywords) && is_null($skillIds)){
+	   		return view('user.mission-search-result')->with('missions', Mission::All());
+		}
+		$missions = Mission::where(function ($query) use($keywords) {
 			if(isset($keywords)){
 				foreach(explode(" ",$keywords) as $keyword) {
-					$query->orWhere('description', 'like', '%' . $keyword . '%');
+					$query->orWhere('description', 'like', '%' . $keyword . '%')
+					->orWhere('title', 'like', '%' . $keyword . '%');
 				}
 			}
 	    })
-	    ->whereHas('skills',function($query) use($input) {
-			$skillIds = $input['skill'];
+	    ->whereHas('skills',function($query) use($skillIds) {
             if(isset($skillIds)){
             	foreach(explode(" ",$skillIds) as $skillId) {
                 	$query->where("skill_id",$skillId);
 				}
             }
-
         })
+        ->where('activated',1)
 	    ->get();
 	    return view('user.mission-search-result')->with('missions',$missions);
 	}

@@ -45,6 +45,7 @@
                <thead>
                   <tr>
                      <th>Title</th>
+                     <th>Owner</th>
                      <th>Description</th>
                      <th>Paymnent Type</th>
                      <th>Price</th>
@@ -58,6 +59,7 @@
                   @foreach($missions as $mission)
                   <tr>
                      <td>{{$mission->title}}</td>
+                     <td>{{$mission->user->name}}</td>
                      <td>{{$mission->description}}</td>
                      <td>{{$mission->paymnent_type}}</td>
                      <td>{{$mission->price}}</td>
@@ -65,7 +67,7 @@
                      <td>{{$mission->end_time}}</td>
                      <td>{{$mission->created_at}}</td>
                      <td nowrap>
-                        <a href="{{url('/missions/get/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
                         <i class="la la-trash">Get mission</i>
                         </a>
                      </td>
