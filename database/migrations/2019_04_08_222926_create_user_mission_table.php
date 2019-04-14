@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMissionsTable extends Migration
+class CreateUserMissionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,14 @@ class CreateMissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('missions', function (Blueprint $table) {
+        Schema::create('user_mission', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('title', 100);
-            $table->string('description', 255)->nullable();
-            $table->string('payment_type', 100);
-            $table->double('price');
-            $table->boolean('activated');
-            $table->date('start_time');
-            $table->date('end_time')->nullable();
+            $table->integer('mission_id')->unsigned()->index();
+            $table->foreign('mission_id')->references('id')->on('missions')->onDelete('cascade');
             $table->timestamps();
-        }); 
+        });
     }
 
     /**
@@ -35,6 +30,6 @@ class CreateMissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('missions');
+        Schema::dropIfExists('user_mission');
     }
 }

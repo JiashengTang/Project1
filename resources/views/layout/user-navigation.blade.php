@@ -32,7 +32,7 @@
    		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet" type="text/css" />
-<!-- 	<link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" />
+	<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-select/dist/css/bootstrap-select.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/select2/dist/css/select2.css')}}" rel="stylesheet" type="text/css" />
@@ -47,16 +47,16 @@
 		<link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/toastr/build/toastr.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/jstree/dist/themes/default/style.css')}}" rel="stylesheet" type="text/css" />
- 		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" />
+ 		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.min.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/socicon/css/socicon.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/line-awesome/css/line-awesome.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/flaticon/css/flaticon.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/metronic/css/styles.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/vendors/fontawesome5/css/all.min.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('resources/theme/metronic/vendors/vendors/fontawesome5/css/all.min.css')}}" rel="stylesheet" type="text/css" /> -->
 
-		<!--end:: Global Optional Vendors -->
+		<!--end:: Global Optional Vendors
 
 		<!--begin::Global Theme Styles -->
 		<link href="{{asset('resources/theme/metronic/assets/demo/base/style.bundle.css')}}" rel="stylesheet" type="text/css" />
@@ -116,7 +116,9 @@
 											<li class="m-menu__item"><a id="my-courses-btn" href="{{url('/home')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-analytics"></i><span class="m-menu__link-text">Home</span></a>
 											</li>
 											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Skills</span></a>
-											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Missions</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Own Missions</span></a>
+											</li>
+											<li class="m-menu__item"><a href="{{url('/get/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Got Missions</span></a>
 											</li>
 											<li class="m-menu__item"><a href="{{url('/missions/search')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">Find Missions</span></a>
 											</li>					
@@ -239,7 +241,7 @@
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/forms/bootstrap-timepicker.init.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/bootstrap-daterangepicker/daterangepicker.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/forms/bootstrap-daterangepicker.init.js')}}" type="text/javascript"></script>
-<!-- 	<script src="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js')}}" type="text/javascript"></script>
+	<!-- <script src="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/bootstrap-maxlength/src/bootstrap-maxlength.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/js/bootstrap-switch.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/forms/bootstrap-switch.init.js')}}" type="text/javascript"></script>
@@ -271,18 +273,18 @@
 		<script src="{{asset('resources/theme/metronic/vendors/jstree/dist/jstree.js')}}" type="text/javascript"></script>
  		<script src="{{asset('resources/theme/metronic/vendors/raphael/raphael.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/morris.js/morris.js')}}" type="text/javascript"></script>
-		<script src="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.js')}}" type="text/javascript"></script>
+ -->		<script src="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/chart.js/dist/Chart.bundle.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/charts/chart.init.js')}}" type="text/javascript"></script>
-		<script src="{{asset('resources/theme/metronic/vendors/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js')}}" type="text/javascript"></script>
+		<!-- <script src="{{asset('resources/theme/metronic/vendors/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/vendors/jquery-idletimer/idle-timer.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/waypoints/lib/jquery.waypoints.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/counterup/jquery.counterup.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/es6-promise-polyfill/promise.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.js')}}" type="text/javascript"></script>
-		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/base/sweetalert2.init.js')}}" type="text/javascript"></script>
+		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/base/sweetalert2.init.js')}}" type="text/javascript"></script> -->
 
-		<!--end:: Global Optional Vendors -->
+		<!--end:: Global Optional Vendors
 
 		<!--begin::Global Theme Bundle -->
 		<script src="{{asset('resources/theme/metronic/assets/demo/base/scripts.bundle.js')}}" type="text/javascript"></script>

@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Create New Mission
+                        Mission Detail
                      </h3>
                   </div>
                </div>
@@ -69,11 +69,6 @@
                            <label class="form-control" name="description" readonly>{{$mission->description}}</label>
                         </div>
                      </div>                                               
-                  </div>
-               </div>
-               <div class="m-portlet__foot m-portlet__foot--fit">
-                  <div class="m-form__actions">
-                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                </div>
             </form>

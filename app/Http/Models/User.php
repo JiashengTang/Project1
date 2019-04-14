@@ -25,4 +25,9 @@ class User extends Model
     {
         return $this->belongsToMany('App\Http\Models\Skill', 'user_skill', 'user_id', 'skill_id');
     }
+
+    public function gotMissions()
+    {
+        return $this->belongsToMany('App\Http\Models\Mission', 'user_mission', 'user_id', 'mission_id');
+    }
 }

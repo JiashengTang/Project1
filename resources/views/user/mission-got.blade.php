@@ -33,7 +33,7 @@
                       <a href="{{url('/missions/search')}}" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
                         <span>
                           <i class="la la-plus"></i>
-                          <span>Find More Mission</span>
+                          <span>Get new Mission</span>
                         </span>
                       </a>
                     </li>
@@ -56,10 +56,10 @@
                   </tr>
                </thead>
                <tbody>
-                  @foreach($missions as $mission)
+                  @foreach(Session::get('user')[0]->gotMissions()->where('activated', '1')->get() as $mission)
                   <tr>
                      <td>{{$mission->title}}</td>
-                     <td>{{$mission->user->name}}</td>
+                     <td>{{$mission->user()->name}}</td>
                      <td>{{$mission->description}}</td>
                      <td>{{$mission->paymnent_type}}</td>
                      <td>{{$mission->price}}</td>
@@ -67,8 +67,8 @@
                      <td>{{$mission->end_time}}</td>
                      <td>{{$mission->created_at}}</td>
                      <td nowrap>
-                        <a href="{{url('/missions/get/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
-                        <i class="la la-trash">Get mission</i>
+                        <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <i class="la la-trash">Detail</i>
                         </a>
                      </td>
                   </tr>
@@ -92,6 +92,7 @@ var MissionsDatatablesColumnRendering = function() {
         table.DataTable({
             responsive: true,
             pageLength: 10,
+            order: [4, 'desc']
         });
     };
 
@@ -101,5 +102,28 @@ var MissionsDatatablesColumnRendering = function() {
         },
     };
 }();
+
+// var HistoriesDatatablesColumnRendering = function() {
+//     var initActivityTable = function() {
+//         var table = $('#history-table');
+//         // begin first table
+//         table.DataTable({
+//             responsive: true,
+//             pageLength: 10,
+//             order: [4, 'desc']
+//         });
+//     };
+
+//     return {
+//         init: function() {
+//             initActivityTable();
+//         },
+//     };
+// }();
+
+jQuery(document).ready(function() {
+    MissionsDatatablesColumnRendering.init();
+    // HistoriesDatatablesColumnRendering.init();
+});
 </script>
 @endsection

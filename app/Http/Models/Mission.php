@@ -25,4 +25,10 @@ class Mission extends Model
     {
         return $this->belongsToMany('App\Http\Models\Skill', 'mission_skill', 'mission_id', 'skill_id');
     }
+
+
+    public function gotUsers()
+    {
+        return $this->belongsToMany('App\Http\Models\User', 'user_mission', 'mission_id', 'user_id');
+    }
 }

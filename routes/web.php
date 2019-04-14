@@ -23,6 +23,7 @@ Route::post('/register', 'UserController@userRegister');
 Route::group(['middleware' => ['web','login']], function () {
 	
 	Route::get('/', 'UserController@showHomePage');
+	Route::get('/home', 'UserController@showHomePage');
 	Route::get('/logout', 'UserController@userLogOut');
 
 
@@ -43,6 +44,15 @@ Route::group(['middleware' => ['web','login']], function () {
 	Route::get('/missions/search', 'UserController@showMissionSearchPage');
 	Route::post('/missions/search', 'UserController@showMissionSearchResultPage');
 
+
+	Route::get('/get/missions', 'UserController@showGotMissionPage');
+	Route::get('/missions/get/{missionId}', 'UserController@showGetMissionPage');
+	Route::get('/missions/get/{missionId}/new', 'UserController@getMission');
+
+
+	Route::get('/match', 'MatchController@matchMissions');
+
+	
 });
 
 

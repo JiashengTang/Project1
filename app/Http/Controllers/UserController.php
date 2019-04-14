@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\MatchController;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -63,7 +64,11 @@ class UserController extends Controller{
 	}
 
 	public function showHomePage(){
-		return view('user.home');
+		$matchResults = MatchController::matchMissions();
+		if(is_null($matchResults)){
+			return self::showSkillPage();
+		}
+		return view('user.home')->with('matchResults', $matchResults);
 	}
 
 	public function showSkillPage(){
@@ -160,6 +165,7 @@ class UserController extends Controller{
 		if(is_null($keywords) && is_null($skillIds)){
 	   		return view('user.mission-search-result')->with('missions', Mission::All());
 		}
+		
 		$missions = Mission::where(function ($query) use($keywords) {
 			if(isset($keywords)){
 				foreach(explode(" ",$keywords) as $keyword) {
@@ -180,6 +186,19 @@ class UserController extends Controller{
 	    return view('user.mission-search-result')->with('missions',$missions);
 	}
 
+	public function showGotMissionPage(){
+		return view('user.mission-got');
+	}
+
+	public function showGetMissionPage($missionId){
+		return view('user.mission-got');
+	}
+
+	public function getMission($missionId){
+		$user = Session::get('user')[0]->first();
+		$user->gotMissions()->attach($missionId);
+		return redirect('/	/missions');
+	}
 	
 
 }
