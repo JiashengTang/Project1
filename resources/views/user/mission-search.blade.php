@@ -67,7 +67,7 @@
                </div>
                <div class="m-portlet__foot m-portlet__foot--fit">
                   <div class="m-form__actions">
-                     <button type="submit" class="btn btn-primary">Search</button>
+                     <button type="submit" class="btn btn-primary search-button">Search</button>
                   </div>
                </div>
             </form>

@@ -68,7 +68,7 @@
                         <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
                         <i class="la la-trash">Detail</i>
                         </a>
-                        <a href="{{url('/missions/delete/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <a href="{{url('/missions/delete/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill delete-mission" title="View">
                         <i class="la la-trash">Delete</i>
                         </a>
                      </td>
@@ -118,7 +118,7 @@
                      <td>{{$history->end_time}}</td>
                      <td>{{$history->created_at}}</td>
                      <td nowrap>
-                        <a href="{{url('/missions/reactive/' . $history->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <a href="{{url('/missions/reactive/' . $history->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill reactive-mission" title="View">
                         <i class="la la-trash">Reactive</i>
                         </a>
                      </td>
