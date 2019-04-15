@@ -40,9 +40,9 @@
                         </div>
                      </div>      
                      <div class="form-group m-form__group row">
-                        <label class="col-lg-2 col-form-label">*Paymnent type:</label>
+                        <label class="col-lg-2 col-form-label">*Payment type:</label>
                         <div class="col-lg-6">
-                           <select class="form-control m-input m-input--square" name="paymnent-type">
+                           <select class="form-control m-input m-input--square" name="payment-type">
                               <option value="Once" selected="selected">Once</option>
                               <option value="Hour">Hour</option>
                               <option value="Daily">Daily</option>

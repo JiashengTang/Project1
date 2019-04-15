@@ -24,7 +24,7 @@ class UserController extends Controller{
        	else if($user->activated == 0){
 			return view('user.login')->with('errorMsg', "Sorry this account has been deactivited, please connect the manager");
        	}
-       	else if(Hash::check($input['password'],$user->password)){
+   	 	else if(\Auth::attempt(['email' => $input['email'], 'password' => $input['password']])){
     			$request->session()->push('user', $user);
    				return redirect('/');
    		}
@@ -117,7 +117,7 @@ class UserController extends Controller{
 		$newMission->user_id = Session::get('user')[0]->id;
 		$newMission->title = $input['title'];
 		$newMission->description = $input['description'];
-		$newMission->paymnent_type = $input['paymnent-type'];
+		$newMission->paymnent_type = $input['payment-type'];
 		$newMission->price = $input['price'];
 		if (isset($input['start-time'])){
 			$newMission->start_time = date('Y-m-d H:i', strtotime($input['start-time']));

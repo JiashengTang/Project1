@@ -3,9 +3,13 @@
 namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
+    use Notifiable;
+
     protected $table = 'users';
     protected $primaryKey='id';
     public $timestamps = false;
@@ -29,5 +33,13 @@ class User extends Model
     public function gotMissions()
     {
         return $this->belongsToMany('App\Http\Models\Mission', 'user_mission', 'user_id', 'mission_id');
+    }
+
+    public function setAttribute($key, $value)
+    {
+        $isRememberTokenAttribute = $key == $this->getRememberTokenName();
+        if (!$isRememberTokenAttribute) {
+            parent::setAttribute($key, $value);
+        }
     }
 }

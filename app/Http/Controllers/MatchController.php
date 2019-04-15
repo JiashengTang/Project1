@@ -27,16 +27,18 @@ class MatchController extends Controller{
 			$missionSkills = $mission->skills()->get();
 			if($missionSkills->count() > 0){
 				$percent = self::matchOneMission($missionSkills, $userSkills);
-				array_push($matchResults, array(
-	                    'missionId' => $mission->id,
-	                    'title' => $mission->title,
-	                    'owner' => $mission->user->name,
-	                    'payment' => '$'.$mission->price.' / '.$mission->payment_type,
-	                    'start_time' => $mission->start_time,
-	                    'end_time' => $mission->end_time,
-	                    'percent' => '%'.$percent,
-	                )
-	            );
+				if($percent != 0){
+					array_push($matchResults, array(
+		                    'missionId' => $mission->id,
+		                    'title' => $mission->title,
+		                    'owner' => $mission->user->name,
+		                    'payment' => '$'.$mission->price.' / '.$mission->payment_type,
+		                    'start_time' => $mission->start_time,
+		                    'end_time' => $mission->end_time,
+		                    'percent' => $percent.'%',
+		                )
+		            );
+				}
 			}
 		}
 

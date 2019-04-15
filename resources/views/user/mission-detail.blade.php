@@ -40,9 +40,9 @@
                         </div>
                      </div>      
                      <div class="form-group m-form__group row">
-                        <label class="col-lg-2 col-form-label">*Paymnent type:</label>
+                        <label class="col-lg-2 col-form-label">*Payment type:</label>
                         <div class="col-lg-6">
-                           <label class="form-control" name="paymnent-type" readonly>{{$mission->paymnent_type}}</label>
+                           <label class="form-control" name="payment-type" readonly>{{$mission->payment_type}}</label>
                         </div>
                      </div>    
                      <div class="form-group m-form__group row">

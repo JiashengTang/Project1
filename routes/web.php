@@ -20,7 +20,7 @@ Route::get('/register', function () {
 });
 Route::post('/register', 'UserController@userRegister');
 
-Route::group(['middleware' => ['web','login']], function () {
+Route::group(['middleware' => ['web','login','auth']], function () {
 	
 	Route::get('/', 'UserController@showHomePage');
 	Route::get('/home', 'UserController@showHomePage');

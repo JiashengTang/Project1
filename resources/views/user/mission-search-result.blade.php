@@ -61,7 +61,7 @@
                      <td>{{$mission->title}}</td>
                      <td>{{$mission->user->name}}</td>
                      <td>{{$mission->description}}</td>
-                     <td>{{$mission->paymnent_type}}</td>
+                     <td>{{$mission->payment_type}}</td>
                      <td>{{$mission->price}}</td>
                      <td>{{$mission->start_time}}</td>
                      <td>{{$mission->end_time}}</td>
