@@ -117,7 +117,7 @@ class UserController extends Controller{
 		$newMission->user_id = Session::get('user')[0]->id;
 		$newMission->title = $input['title'];
 		$newMission->description = $input['description'];
-		$newMission->paymnent_type = $input['payment-type'];
+		$newMission->payment_type = $input['payment-type'];
 		$newMission->price = $input['price'];
 		if (isset($input['start-time'])){
 			$newMission->start_time = date('Y-m-d H:i', strtotime($input['start-time']));

@@ -8,11 +8,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class SearchMissionTest extends DuskTestCase
 {
-    /**
-     * A Dusk test example.
-     *
-     * @return void
-     */
     public function testExample()
     {
         $this->browse(function (Browser $browser) {
