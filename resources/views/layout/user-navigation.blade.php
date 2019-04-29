@@ -7,7 +7,7 @@
 		<title>JobPast</title>
 		<meta name="robots" content="noindex,nofollow">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="{{asset('resources/images/favicon.png')}}" />
+        <link rel="shortcut icon" href="{{asset('resources/images/logo.png')}}" />
         
 		<!--begin::Web font -->
 <!-- 		<script src="{{asset('resources/theme/metronic/assets/app/js/webfont.js')}}"></script>

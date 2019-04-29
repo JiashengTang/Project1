@@ -47,17 +47,22 @@ class MatchController extends Controller{
 
 	private static function matchOneMission($missionSkills,$userSkills){
 
-		$score = 100 / $missionSkills->count();
-		$percent = 0;
+		// $score = 100 / $missionSkills->count();
+		// $percent = 0;
+		$tototalScore = 0;
+		$amountScore = 0;
 
 		foreach ($missionSkills as $missionSkill) {
 			foreach ($userSkills as $userSkill) {
+				$tototalScore = $tototalScore + $userSkill->id;
 				if($missionSkill->id == $userSkill->id){
-					$percent = $percent + $score;
+					// $percent = $percent + $score;
+					$amountScore = $amountScore + $userSkill->id;
 				}
 			}
 		}
-		return $percent;
+		// return $percent;
+		return $amountScore/$tototalScore;
 		
 	}
 
