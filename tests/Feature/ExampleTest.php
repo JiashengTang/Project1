@@ -16,6 +16,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus('Login');
+        $response->assertStatus(302);
     }
 }
