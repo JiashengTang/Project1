@@ -18,11 +18,7 @@ class LoginTest extends DuskTestCase
                 ->type('password', '123')
                 ->type('confirm-password', '123')
                 ->click('#register-btn')
-                ->visit('/login')
-                ->type('email', 'test@test.com')
-                ->type('password', '123')
-                ->click('#m_login_signin_submit')
-                ->assertSee('Hi,edgar');
+                ->assertSee('Registed successful, please login in');
         });
     }
 }
