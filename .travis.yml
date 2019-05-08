@@ -6,16 +6,16 @@ php:
 before_script:
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
+  - mysql -e 'CREATE DATABASE jobpostc_jobpost;'
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
   - php artisan migrate
 
 before_install:
-  - mysql -e 'CREATE DATABASE jobpostc_jobpost;'
-  
+
 script:
-  - phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml
+  - vendor/bin/phpunit
   
 services:
   - mysql
