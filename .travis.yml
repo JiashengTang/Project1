@@ -6,7 +6,7 @@ php:
 before_script:
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
-  - mysql -e 'CREATE DATABASE jobpostc_jobpost;'
+  - mysql -e 'CREATE DATABASE test;'
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
