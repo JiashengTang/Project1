@@ -7,11 +7,11 @@ before_script:
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
   - mysql -e 'CREATE DATABASE test;'
-  - mysql -e 'INSERT INTO `users` (`id`, `email`, `password`, `name`, `mobile`, `activated`, `created_at`, `updated_at`) VALUES (NULL, 'ddd@ddd.com', 'ddd', 'ddd', '0400000000', '1', NULL, NULL);'
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
   - php artisan migrate
+  - mysql -e 'INSERT INTO `users` (`id`, `email`, `password`, `name`, `mobile`, `activated`, `created_at`, `updated_at`) VALUES (NULL, 'test@test.com', '$2y$10$DfQ5SIBgXVZS2EucVfIFZeRdLrNwtQIWuOJFgEH78jVWnyXB5D7Fe', 'edgar', '0400000000', '1', NULL, NULL);'
 
 before_install:
 
