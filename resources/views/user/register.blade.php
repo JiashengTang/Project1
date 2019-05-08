@@ -139,7 +139,7 @@
 		                           <input class="form-control m-input m-login__form-input--last" type="mobile" placeholder="Mobile" name="mobile" required>
 		                        </div>
 		                        <div class="m-login__form-action">
-		                           <button type="submit" class="btn m-btn--pill m-btn--air btn-danger">Register</button>
+		                           <button type="submit" id="register-btn" class="btn m-btn--pill m-btn--air btn-danger">Register</button>
 		                           <a href="{{url('/login')}}" class="btn m-btn--pill m-btn--air btn-danger">Login</a>
 		                        </div>
 		                        @endif
