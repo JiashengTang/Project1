@@ -66,18 +66,28 @@ Job matchmaking for job seekers in the Australian IT sector - written in Laravel
 Setup your development environment following [the official requirements](https://laravel.com/docs/5.8/releases).
 
 **Clone the repository**
+
 `cd /var/www/`
+
 `sudo rm -rf /var/www/Project1/`
+
 `git clone https://github.com/JiashengTang/Project1.git`
+
 `cd Project1/`
+
 `composer install`
+
 `chmod -R 777 storage/`
+
 `chmod -R 777 vendor/`
 
 
 **[Configure](https://laravel.com/docs/5.8/configuration#environment-configuration) your environment**
+
 `cp .env.travis .env`
+
 `php artisan key:generate`
 
 **Migrate, and (optionally) seed**
+
 `php artisan migrate`
