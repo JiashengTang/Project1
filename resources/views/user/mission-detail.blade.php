@@ -111,7 +111,7 @@
             <!--end::Form-->
          </div>
          <!--end::Portlet-->
-          <!--begin::Portlet-->
+         <!--begin::Portlet-->
          <div class="m-portlet">
             <div class="m-portlet__head">
                <div class="m-portlet__head-caption">

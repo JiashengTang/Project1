@@ -59,7 +59,7 @@
                   @foreach(Session::get('user')[0]->gotMissions()->where('activated', '1')->get() as $mission)
                   <tr>
                      <td>{{$mission->title}}</td>
-                     <td>{{$mission->user()->name}}</td>
+                     <td>{{$mission->user->name}}</td>
                      <td>{{$mission->description}}</td>
                      <td>{{$mission->paymnent_type}}</td>
                      <td>{{$mission->price}}</td>

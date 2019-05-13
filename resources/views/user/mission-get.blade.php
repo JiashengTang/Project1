@@ -29,7 +29,7 @@
                </div>
             </div>
             <!--begin::Form-->
-            <form class="m-form m-form--label-align-right" method="post" enctype="multipart/form-data">
+            <form class="m-form m-form--label-align-right" enctype="multipart/form-data" action="{{url('/missions/get/' . $mission->id . '/new')}}" >
                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                <div class="m-portlet__body">
                   <div class="m-form__section m-form__section--first">
@@ -80,6 +80,46 @@
             <!--end::Form-->
          </div>
          <!--end::Portlet-->
+         <!--begin::Portlet-->
+         <div class="m-portlet">
+            <div class="m-portlet__head">
+               <div class="m-portlet__head-caption">
+                  <div class="m-portlet__head-title">
+                     <span class="m-portlet__head-icon m--hide">
+                     <i class="la la-gear"></i>
+                     </span>
+                     <h3 class="m-portlet__head-text">
+                        Skill List
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <!--begin::Table-->
+            <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Type</th>
+                     <th>Description</th>
+                     <th>Actions</th>
+                  </tr>
+               </thead>
+               <tbody>     
+                  @foreach($mission->skills as $skill)
+                  <tr>
+                     <td>{{$skill->name}}</td>
+                     <td>{{$skill->type->name}}</td>
+                     <td>{{$skill->description}}</td>
+                     <td nowrap>
+                        <a href="{{url('/missions/skills/unlink/' . $mission->id . '/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                        <i class="la la-trash">Delete</i>
+                        </a>
+                     </td>
+                  </tr>
+                  @endforeach
+               </tbody>
+            </table>
+            <!--end::Table-->
       </div>
    </div>
 </div>
@@ -87,4 +127,27 @@
 
 @section('script')
 
+<script type="text/javascript">
+var DatatablesColumnRendering = function() {
+    var initActivityTable = function() {
+        var table = $('#skill-table');
+        // begin first table
+        table.DataTable({
+            responsive: true,
+            pageLength: 10,
+            order: [3, 'desc']
+        });
+    };
+
+    return {
+        init: function() {
+            initActivityTable();
+        },
+    };
+}();
+
+jQuery(document).ready(function() {
+    DatatablesColumnRendering.init();
+});
+</script>
 @endsection

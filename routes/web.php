@@ -45,7 +45,7 @@ Route::group(['middleware' => ['web','login','auth']], function () {
 	Route::post('/missions/search', 'UserController@showMissionSearchResultPage');
 
 
-	Route::get('/get/missions', 'UserController@showGotMissionPage');
+	Route::get('/missions/get', 'UserController@showGotMissionPage');
 	Route::get('/missions/get/{missionId}', 'UserController@showGetMissionPage');
 	Route::get('/missions/get/{missionId}/new', 'UserController@getMission');
 

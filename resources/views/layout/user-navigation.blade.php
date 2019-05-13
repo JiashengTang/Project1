@@ -141,7 +141,7 @@
 											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Skills</span></a>
 											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Own Missions</span></a>
 											</li>
-											<li class="m-menu__item"><a href="{{url('/get/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Got Missions</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions/get')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Got Missions</span></a>
 											</li>
 											<li class="m-menu__item"><a href="{{url('/missions/search')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">Find Missions</span></a>
 											</li>					

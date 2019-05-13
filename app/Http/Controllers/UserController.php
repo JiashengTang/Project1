@@ -191,13 +191,15 @@ class UserController extends Controller{
 	}
 
 	public function showGetMissionPage($missionId){
-		return view('user.mission-got');
+		$skills = Skill::All();
+		$mission = Mission::where('id',$missionId)->first();
+		return view('user.mission-get')->with('mission',$mission)->with('skills',$skills);
 	}
 
 	public function getMission($missionId){
 		$user = Session::get('user')[0]->first();
 		$user->gotMissions()->attach($missionId);
-		return redirect('/	/missions');
+		return redirect('/missions/get');
 	}
 	
 

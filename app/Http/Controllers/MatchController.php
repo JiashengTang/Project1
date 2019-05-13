@@ -53,16 +53,16 @@ class MatchController extends Controller{
 		$amountScore = 0;
 
 		foreach ($missionSkills as $missionSkill) {
-			$tototalScore = $tototalScore + $userSkill->id;
-			foreach ($userSkills as $userSkill) {
-				if($missionSkill->id == $userSkill->id){
+			$tototalScore = $tototalScore + $missionSkill->id;
+			foreach ($userSkills as $missionSkill) {
+				if($missionSkill->id == $missionSkill->id){
 					// $percent = $percent + $score;
-					$amountScore = $amountScore + $userSkill->id;
+					$amountScore = $amountScore + $missionSkill->id;
 				}
 			}
 		}
 		// return $percent;
-		return $amountScore/$tototalScore;
+		return $amountScore/$tototalScore * 100;
 		
 	}
 
