@@ -31,11 +31,13 @@ class MatchController extends Controller{
 					array_push($matchResults, array(
 		                    'missionId' => $mission->id,
 		                    'title' => $mission->title,
+		                    'description' => $mission->description,
 		                    'owner' => $mission->user->name,
-		                    'payment' => '$'.$mission->price.' / '.$mission->payment_type,
+		                    'payment' => $mission->price,
+		                    'payment_type' => $mission->payment_type,
 		                    'start_time' => $mission->start_time,
 		                    'end_time' => $mission->end_time,
-		                    'percent' => $percent.'%',
+		                    'percent' => $percent,
 		                )
 		            );
 				}
