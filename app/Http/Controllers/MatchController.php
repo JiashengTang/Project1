@@ -37,7 +37,7 @@ class MatchController extends Controller{
 		                    'payment_type' => $mission->payment_type,
 		                    'start_time' => $mission->start_time,
 		                    'end_time' => $mission->end_time,
-		                    'percent' => $percent,
+		                    'percent' => round($percent,2),
 		                )
 		            );
 				}
@@ -82,6 +82,11 @@ class MatchController extends Controller{
 
 	    return $missions;
 
+	}
+
+	public static function getRandomMission(){
+		$mission = Mission::inRandomOrder()->first();
+		return $mission;
 	}
 
 }

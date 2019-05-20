@@ -1,5 +1,8 @@
 @extends('layout.user-navigation')
 
+@section('css')
+
+@endsection
 @section('body')
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
@@ -58,7 +61,9 @@
                     <div class="m-widget5__item">
                       <div class="m-widget5__content">
                         <div class="m-widget5__pic">
-                          <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
+                          <a href="{{url('/missions/get/' . $matchResult['missionId'])}}">
+                            <img class="m-widget7__img" src="{{asset('resources/images/logo.png')}}" alt="">
+                          </a>
                         </div>
                         <div class="m-widget5__section">
                           <h4 class="m-widget5__title">
@@ -95,7 +100,7 @@
                           <span class="m-widget5__sales">{{$matchResult['payment_type']}}</span>
                         </div>
                         <div class="m-widget5__stats2">
-                          <span class="m-widget5__number">{{$matchResult['percent']}}</span><br>
+                          <span class="m-widget5__number">{{$matchResult['percent']}}%</span><br>
                           <span class="m-widget5__votes">percent</span>
                         </div>
                       </div>
@@ -115,7 +120,9 @@
                     <div class="m-widget5__item">
                       <div class="m-widget5__content">
                         <div class="m-widget5__pic">
-                          <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
+                          <a href="{{url('/missions/get/' . $matchResult['missionId'])}}">
+                            <img class="m-widget7__img" src="{{asset('resources/images/logo.png')}}" alt="">
+                          </a>
                         </div>
                         <div class="m-widget5__section">
                           <h4 class="m-widget5__title">
@@ -152,7 +159,7 @@
                           <span class="m-widget5__sales">{{$matchResult['payment_type']}}</span>
                         </div>
                         <div class="m-widget5__stats2">
-                          <span class="m-widget5__number">{{$matchResult['percent']}}</span><br>
+                          <span class="m-widget5__number">{{$matchResult['percent']}}%</span><br>
                           <span class="m-widget5__votes">percent</span>
                         </div>
                       </div>
@@ -172,7 +179,9 @@
                     <div class="m-widget5__item">
                       <div class="m-widget5__content">
                         <div class="m-widget5__pic">
-                          <img class="m-widget7__img" src="../../assets/app/media/img//products/product11.jpg" alt="">
+                          <a href="{{url('/missions/get/' . $matchResult['missionId'])}}">
+                            <img class="m-widget7__img" src="{{asset('resources/images/logo.png')}}" alt="">
+                          </a>
                         </div>
                         <div class="m-widget5__section">
                           <h4 class="m-widget5__title">
@@ -209,7 +218,7 @@
                           <span class="m-widget5__sales">{{$matchResult['payment_type']}}</span>
                         </div>
                         <div class="m-widget5__stats2">
-                          <span class="m-widget5__number">{{$matchResult['percent']}}</span><br>
+                          <span class="m-widget5__number">{{$matchResult['percent']}}%</span><br>
                           <span class="m-widget5__votes">percent</span>
                         </div>
                       </div>
@@ -228,93 +237,42 @@
         <!--end:: Widgets/Best Sellers-->
       </div>
 
-      <div class="col-xl-4">
+      <div class="col-xl-4" style="max-height: 500px">
 
         <!--begin:: Widgets/Announcements 1-->
-        <div class="m-portlet m--bg-accent m-portlet--bordered-semi m-portlet--skin-dark m-portlet--full-height ">
+        <div id="random-mission"class="m-portlet m--bg m-portlet--bordered-semi m-portlet--skin-dark m-portlet--full-height ">
           <div class="m-portlet__head">
             <div class="m-portlet__head-caption">
               <div class="m-portlet__head-title">
                 <h3 class="m-portlet__head-text">
-                  Announcements
+                  {{$randomMission->title}}
                 </h3>
               </div>
-            </div>
-            <div class="m-portlet__head-tools">
-              <ul class="m-portlet__nav">
-                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" m-dropdown-toggle="hover">
-                  <a href="#" class="m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl">
-                    <i class="la la-ellipsis-h m--font-light"></i>
-                  </a>
-                  <div class="m-dropdown__wrapper">
-                    <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
-                    <div class="m-dropdown__inner">
-                      <div class="m-dropdown__body">
-                        <div class="m-dropdown__content">
-                          <ul class="m-nav">
-                            <li class="m-nav__section m-nav__section--first">
-                              <span class="m-nav__section-text">Quick Actions</span>
-                            </li>
-                            <li class="m-nav__item">
-                              <a href="" class="m-nav__link">
-                                <i class="m-nav__link-icon flaticon-share"></i>
-                                <span class="m-nav__link-text">Activity</span>
-                              </a>
-                            </li>
-                            <li class="m-nav__item">
-                              <a href="" class="m-nav__link">
-                                <i class="m-nav__link-icon flaticon-chat-1"></i>
-                                <span class="m-nav__link-text">Messages</span>
-                              </a>
-                            </li>
-                            <li class="m-nav__item">
-                              <a href="" class="m-nav__link">
-                                <i class="m-nav__link-icon flaticon-info"></i>
-                                <span class="m-nav__link-text">FAQ</span>
-                              </a>
-                            </li>
-                            <li class="m-nav__item">
-                              <a href="" class="m-nav__link">
-                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
-                                <span class="m-nav__link-text">Support</span>
-                              </a>
-                            </li>
-                            <li class="m-nav__separator m-nav__separator--fit">
-                            </li>
-                            <li class="m-nav__item">
-                              <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">Cancel</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
           <div class="m-portlet__body">
 
             <!--begin::Widget 7-->
             <div class="m-widget7 m-widget7--skin-dark">
-              <div class="m-widget7__desc">
-                Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy euismod tinciduntut laoreet doloremagna
+              <div class="m-widget7__desc" >
+                {{$randomMission->description}}
               </div>
               <div class="m-widget7__user">
                 <div class="m-widget7__user-img">
-                  <img class="m-widget7__img" src="../../assets/app/media/img//users/100_3.jpg" alt="">
+                  <img class="m-widget7__img" src="{{asset('resources/images/logo.png')}}" alt="">
                 </div>
                 <div class="m-widget7__info">
                   <span class="m-widget7__username">
-                    Dan Bold
+                   Owner: {{$randomMission->user->name}}
                   </span><br>
                   <span class="m-widget7__time">
-                    3 days ago
+                    ${{$randomMission->price}} / ${{$randomMission->payment_type}}
                   </span>
                 </div>
               </div>
-              <div class="m-widget7__button">
-                <a class="m-btn m-btn--pill btn btn-danger" href="#" role="button">All Feeds</a>
+              <div>
+                <button class="m-btn m-btn--pill btn btn-danger" onclick="randomMission()">Find new</button>
+                <button class="m-btn m-btn--pill btn btn-focus" style="float:right; margin-right:5px;" onclick="getRandomMisison()">Apply job</button>
               </div>
             </div>
 
@@ -388,6 +346,31 @@ var MissionsDatatables = function() {
 jQuery(document).ready(function() {
   MissionsDatatables.init();
 });
+</script>
+
+<script type="text/javascript">
+  function randomMission(){ 
+    var back = ["#ff0000","blue","gray"];
+    var randomColor = back[Math.floor(Math.random() * back.length)];
+    $('#random-mission').css('background-color', randomColor);
+  }
+
+  $(document).keydown(function (event) {
+    if (event.keyCode == 37) { 
+       randomMission();
+    } 
+    if (event.keyCode == 39) { 
+       getRandomMisison();
+    } 
+  });
+
+  var randomMissionId = '{{$randomMission->id}}';
+  function getRandomMisison(){
+    var href = "{{url('/missions/get')}}/" + randomMissionId;
+    window.location.href = href;
+  }
+  randomMission();
+
 </script>
 @endsection
 

@@ -89,11 +89,6 @@
 									<h3>JobPost</h3>
 									<br>
 									<br>
-							        <div id="advertisment-block">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_1.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_2.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_3.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							        </div>
 								</div>
 							</div>
 						</div>
@@ -211,11 +206,6 @@
 		<!--begin::Page Scripts -->
 		<script src="{{asset('resources/community/jqbtk/jqbtk.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/community/devrama-slider/jquery.devrama.slider.min-0.9.4.js')}}" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#advertisment-block').DrSlider({navigationType: 'circle'});
-            });
-        </script>		
 		<!--end::Page Scripts -->
 	</body>
 

@@ -47,7 +47,7 @@ Route::group(['middleware' => ['web','login','auth']], function () {
 	Route::get('/missions/get/{missionId}/new', 'MissionController@getMission');
 
 	Route::get('/match', 'MissionController@matchMissions');
-
+	Route::get('/match/random', 'MissionController@getRandomMission');
 	
 });
 

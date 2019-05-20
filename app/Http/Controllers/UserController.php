@@ -67,7 +67,7 @@ class UserController extends Controller{
 		if(is_null($matchResults)){
 			return self::showSkillPage();
 		}
-		return view('user.home')->with('matchResults', $matchResults);
+		return view('user.home')->with('matchResults', $matchResults)->with('randomMission', MatchController::getRandomMission());
 	}
 
 	public function showSkillPage(){
