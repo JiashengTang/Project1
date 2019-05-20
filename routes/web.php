@@ -32,25 +32,21 @@ Route::group(['middleware' => ['web','login','auth']], function () {
 	Route::get('/skills/delete/{skillId}', 'UserController@deleteSkill');
 
 
-	Route::get('/missions', 'UserController@showMissionPage');
-	Route::get('/missions/create', 'UserController@showCreateMissionPage');
-	Route::post('/missions/create', 'UserController@createMission');
-	Route::get('/missions/delete/{missionId}', 'UserController@deleteMission');
-	Route::get('/missions/reactive/{missionId}', 'UserController@reactiveMission');
-	Route::get('/missions/detail/{missionId}', 'UserController@showMissionDetailPage');
-	Route::post('/missions/skills/link/{missionId}', 'UserController@linkSkill');
-	Route::get('/missions/skills/unlink/{missionId}/{skillId}', 'UserController@unlinkSkill');
+	Route::get('/missions', 'MissionController@showMissionPage');
+	Route::get('/missions/create', 'MissionController@showCreateMissionPage');
+	Route::post('/missions/create', 'MissionController@createMission');
+	Route::get('/missions/delete/{missionId}', 'MissionController@deleteMission');
+	Route::get('/missions/reactive/{missionId}', 'MissionController@reactiveMission');
+	Route::get('/missions/detail/{missionId}', 'MissionController@showMissionDetailPage');
+	Route::post('/missions/skills/link/{missionId}', 'MissionController@linkSkill');
+	Route::get('/missions/skills/unlink/{missionId}/{skillId}', 'MissionController@unlinkSkill');
+	Route::get('/missions/search', 'MissionController@showMissionSearchPage');
+	Route::post('/missions/search', 'MissionController@showMissionSearchResultPage');
+	Route::get('/missions/get', 'MissionController@showGotMissionPage');
+	Route::get('/missions/get/{missionId}', 'MissionController@showGetMissionPage');
+	Route::get('/missions/get/{missionId}/new', 'MissionController@getMission');
 
-	Route::get('/missions/search', 'UserController@showMissionSearchPage');
-	Route::post('/missions/search', 'UserController@showMissionSearchResultPage');
-
-
-	Route::get('/missions/get', 'UserController@showGotMissionPage');
-	Route::get('/missions/get/{missionId}', 'UserController@showGetMissionPage');
-	Route::get('/missions/get/{missionId}/new', 'UserController@getMission');
-
-
-	Route::get('/match', 'MatchController@matchMissions');
+	Route::get('/match', 'MissionController@matchMissions');
 
 	
 });
