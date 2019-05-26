@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">New Mission</h3>
+         <h3 class="m-subheader__title m-subheader__title">Job</h3>
       </div>
    </div>
 </div>
@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Mission Detail
+                        Information and Detail
                      </h3>
                   </div>
                </div>
@@ -125,32 +125,34 @@
                   </div>
                </div>
             </div>
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
-               <thead>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Description</th>
-                     <th>Actions</th>
-                  </tr>
-               </thead>
-               <tbody>     
-                  @foreach($mission->skills as $skill)
-                  <tr>
-                     <td>{{$skill->name}}</td>
-                     <td>{{$skill->type->name}}</td>
-                     <td>{{$skill->description}}</td>
-                     <td nowrap>
-                        <a href="{{url('/missions/skills/unlink/' . $mission->id . '/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
-                        <i class="la la-trash">Delete</i>
-                        </a>
-                     </td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+            <div class="m-portlet__body">
+               <!--begin::Table-->
+               <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                     </tr>
+                  </thead>
+                  <tbody>     
+                     @foreach($mission->skills as $skill)
+                     <tr>
+                        <td>{{$skill->name}}</td>
+                        <td>{{$skill->type->name}}</td>
+                        <td>{{$skill->description}}</td>
+                        <td nowrap>
+                           <a href="{{url('/missions/skills/unlink/' . $mission->id . '/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                           <i class="la la-trash">Delete</i>
+                           </a>
+                        </td>
+                     </tr>
+                     @endforeach
+                  </tbody>
+               </table>
+               <!--end::Table-->
+            </div>
          </div>
          <!--end::Portlet-->
       </div>

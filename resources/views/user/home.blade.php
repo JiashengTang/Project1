@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">Hi,{{Session::get('user')[0]['name']}}</h3>
+         <h3 class="m-subheader__title m-subheader__title">Hi, {{Session::get('user')[0]['name']}}</h3>
       </div>
    </div>
 </div>
@@ -279,8 +279,48 @@
             <!--end::Widget 7-->
           </div>
         </div>
-
         <!--end:: Widgets/Announcements 1-->
+
+        
+         <!--begin::Portlet-->
+         <div class="m-portlet">
+            <div class="m-portlet__head">
+               <div class="m-portlet__head-caption">
+                  <div class="m-portlet__head-title">
+                     <span class="m-portlet__head-icon m--hide">
+                     <i class="la la-gear"></i>
+                     </span>
+                     <h3 class="m-portlet__head-text">
+                        Your Job List
+                     </h3>
+                  </div>
+               </div>  
+            </div>  
+
+            <div class="m-portlet__body">
+              <!--begin::Table-->
+              <table class="table table-striped table-bordered table-hover table-checkable" id="mission-table">
+                 <thead>
+                    <tr>
+                       <th>Title</th>
+                       <th>Owner</th>
+                       <th>Price</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    @foreach(Session::get('user')[0]->gotMissions()->where('activated', '1')->get() as $mission)
+                    <tr>
+                       <td>{{$mission->title}}</td>
+                       <td>{{$mission->user->name}}</td>
+                       <td>{{$mission->price}}</td>
+                    </tr>
+                    @endforeach
+                 </tbody>
+              </table>
+              <!--end::Table-->
+            </div>
+         </div>
+         <!--end::Portlet-->
       </div>
    </div>
 </div>
@@ -350,8 +390,24 @@ jQuery(document).ready(function() {
 
 <script type="text/javascript">
   function randomMission(){ 
-    var back = ["#ff0000","blue","gray"];
-    var randomColor = back[Math.floor(Math.random() * back.length)];
+    var colorList = ["#ff0000","blue","gray"];
+    var randomColor = back[Math.floor(Math.random() * colorList.length)];
+    var price = '{{$randomMission->price}}';
+    if(price > 500){
+      randomColor = colorList[0];
+    }
+    else if(price > 300){
+      randomColor = colorList[1];
+    }
+    else if(price > 100){
+      randomColor = colorList[2];
+    }
+    else if(price > 50){
+      randomColor = colorList[3];
+    }
+    else{
+      randomColor = colorList[4];
+    }
     $('#random-mission').css('background-color', randomColor);
   }
 

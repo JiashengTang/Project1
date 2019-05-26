@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">New Mission</h3>
+         <h3 class="m-subheader__title m-subheader__title">New Job</h3>
       </div>
    </div>
 </div>
@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Create New Mission
+                        Create New Job
                      </h3>
                   </div>
                </div>

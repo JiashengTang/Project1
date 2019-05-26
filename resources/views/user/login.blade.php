@@ -74,8 +74,8 @@
 
 		<!-- begin:: Page -->
 		<div class="m-grid m-grid--hor m-grid--root m-page">
-			<div class="m-login m-login--signin  m-login--5" id="m_login" style="background-image: url(resources/images/login_bg.jpg);">
-				<div class="m-login__wrapper-1 m-portlet-full-height">
+			<div class="m-login m-login--signin  m-login--5" id="m_login">
+				<div class="m-login__wrapper-1 m-portlet-full-height" style="background-image: url(resources/images/login_bg.jpg); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; ">
 					<div class="m-login__wrapper-1-1">
 						<div class="m-login__contanier">
 							<div class="m-login__content">

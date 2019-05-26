@@ -64,32 +64,35 @@
                   </div>
                </div>
             </div>
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
-               <thead>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Description</th>
-                     <th>Actions</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  @foreach($userSkills as $skill)
-                  <tr>
-                     <td>{{$skill->name}}</td>
-                     <td>{{$skill->type->name}}</td>
-                     <td>{{$skill->description}}</td>
-                     <td nowrap>
-                        <a href="{{url('/skills/delete/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
-                        <i class="la la-trash">Delete</i>
-                        </a>
-                     </td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+
+            <div class="m-portlet__body">
+              <!--begin::Table-->
+              <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
+                 <thead>
+                    <tr>
+                       <th>Name</th>
+                       <th>Type</th>
+                       <th>Description</th>
+                       <th>Actions</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    @foreach($userSkills as $skill)
+                    <tr>
+                       <td>{{$skill->name}}</td>
+                       <td>{{$skill->type->name}}</td>
+                       <td>{{$skill->description}}</td>
+                       <td nowrap>
+                          <a href="{{url('/skills/delete/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                          <i class="la la-trash">Delete</i>
+                          </a>
+                       </td>
+                    </tr>
+                    @endforeach
+                 </tbody>
+              </table>
+              <!--end::Table-->
+            </div>
          </div>
          <!--end::Portlet-->
       </div>

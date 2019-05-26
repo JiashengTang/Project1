@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="{{asset('resources/images/logo.png')}}" />
         
 		<!--begin::Web font -->
-<!-- 		<script src="{{asset('resources/theme/metronic/assets/app/js/webfont.js')}}"></script>
+		<script src="{{asset('resources/theme/metronic/assets/app/js/webfont.js')}}"></script>
 		<script>
 			WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -18,7 +18,8 @@
                 sessionStorage.fonts = true;
             }
           });
-        </script> -->
+        </script>
+
 		<!--end::Web font -->
 
 		<!--begin:: Global Mandatory Vendors -->
@@ -27,40 +28,40 @@
 		<!--end:: Global Mandatory Vendors -->
 
 		<!--begin:: Global Optional Vendors -->
-		<!-- <link href="{{asset('resources/theme/metronic/vendors/tether/dist/css/tether.css')}}" rel="stylesheet" type="text/css" /> -->
+		<link href="{{asset('resources/theme/metronic/vendors/tether/dist/css/tether.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css')}}" rel="stylesheet" type="text/css" />
-   		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet" type="text/css" />
-	<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-select/dist/css/bootstrap-select.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/select2/dist/css/select2.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/nouislider/distribute/nouislider.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.carousel.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.theme.default.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/nouislider/distribute/nouislider.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.carousel.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.theme.default.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/dropzone/dist/dropzone.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/summernote/dist/summernote.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/summernote/dist/summernote.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/toastr/build/toastr.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/jstree/dist/themes/default/style.css')}}" rel="stylesheet" type="text/css" />
- 		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.min.css')}}" rel="stylesheet" type="text/css" />
-		<!-- <link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/socicon/css/socicon.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/line-awesome/css/line-awesome.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/flaticon/css/flaticon.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/metronic/css/styles.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/vendors/fontawesome5/css/all.min.css')}}" rel="stylesheet" type="text/css" /> -->
-
-		<!--end:: Global Optional Vendors
+		<link href="{{asset('resources/theme/metronic/vendors/vendors/fontawesome5/css/all.min.css')}}" rel="stylesheet" type="text/css" />
+		
+		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Styles -->
 		<link href="{{asset('resources/theme/metronic/assets/demo/base/style.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/assets/vendors/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+
 		<!--end::Global Theme Styles -->
 
 		<!--begin::Page Vendors Styles -->
@@ -71,7 +72,7 @@
 	<!-- end::Head -->
 
 	<!-- begin::Body -->
-	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default">
+	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default" style="background-color: grey">
 
 		<!-- begin::Page loader -->
 		<div class="m-page-loader m-page-loader--base">
@@ -136,14 +137,14 @@
 									<button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark " id="m_aside_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
 									<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark ">
 										<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-											<li class="m-menu__item"><a id="my-courses-btn" href="{{url('/home')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-analytics"></i><span class="m-menu__link-text">Home</span></a>
+											<li class="m-menu__item"><a id="my-courses-btn" href="{{url('/home')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-home"></i><span class="m-menu__link-text">Dashboard</span></a>
 											</li>
-											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Skills</span></a>
-											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Own Missions</span></a>
+											<li class="m-menu__item"><a href="{{url('/skills')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-speech-bubble"></i><span class="m-menu__link-text">Skills</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-add-circular-button"></i><span class="m-menu__link-text">Hiring</span></a>
 											</li>
-											<li class="m-menu__item"><a href="{{url('/missions/get')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">My Got Missions</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions/get')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-visible"></i><span class="m-menu__link-text">Apply</span></a>
 											</li>
-											<li class="m-menu__item"><a href="{{url('/missions/search')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">Find Missions</span></a>
+											<li class="m-menu__item"><a href="{{url('/missions/search')}}" class="m-menu__link"><i class="m-menu__link-icon flaticon-search"></i><span class="m-menu__link-text">Find Missions</span></a>
 											</li>					
 										</ul>
 									</div>
@@ -204,7 +205,7 @@
 			<!-- END: Header -->
 
 			<!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body">
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body" style="background-color: grey">
 				<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-container m-container--responsive m-container--xxl m-container--full-height">
 					<div class="m-grid__item m-grid__item--fluid m-wrapper">
                         @yield('body')

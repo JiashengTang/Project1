@@ -14,7 +14,9 @@ class MissionController extends Controller{
 	public function linkSkill($missionId){
 		$input = Input::all();
 		$mission = Mission::where('id',$missionId)->first();
-		$mission->skills()->attach($input['skill-id']);
+		if($mission->skills()->where('skill_id', $input['skill-id'])->count() == 0){
+			$mission->skills()->attach($input['skill-id']);
+		}
 		return redirect('/missions/detail/'.$missionId);
 	}
 
@@ -108,7 +110,9 @@ class MissionController extends Controller{
 	}
 
 	public function showGotMissionPage(){
-		return view('user.mission-got');
+		$user = User::where('id',Session::get('user')[0]->id)->first();
+		$missions = $user->gotMissions;
+		return view('user.mission-got')->with('missions', $missions);
 	}
 
 	public function showGetMissionPage($missionId){
@@ -119,7 +123,10 @@ class MissionController extends Controller{
 
 	public function getMission($missionId){
 		$user = Session::get('user')[0]->first();
-		$user->gotMissions()->attach($missionId);
+
+		if($user->gotMissions()->where('mission_id', $missionId)->count() == 0){
+			$user->gotMissions()->attach($missionId);
+		}
 		return redirect('/missions/get');
 	}
 	

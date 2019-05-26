@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">New Mission</h3>
+         <h3 class="m-subheader__title m-subheader__title">New Job</h3>
       </div>
    </div>
 </div>
@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Get New Mission
+                        Apply New Job
                      </h3>
                   </div>
                </div>
@@ -73,7 +73,7 @@
                </div>
                <div class="m-portlet__foot m-portlet__foot--fit">
                   <div class="m-form__actions">
-                     <button type="submit" class="btn btn-primary">Get This mission</button>
+                     <a href="{{url('/missions/get/' . $mission->id . '/new')}}" class="btn btn-primary">Get This Job</a>
                   </div>
                </div>
             </form>
@@ -94,26 +94,29 @@
                   </div>
                </div>
             </div>
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
-               <thead>
-                  <tr>
-                     <th>Name</th>
-                     <th>Type</th>
-                     <th>Description</th>
-                  </tr>
-               </thead>
-               <tbody>     
-                  @foreach($mission->skills as $skill)
-                  <tr>
-                     <td>{{$skill->name}}</td>
-                     <td>{{$skill->type->name}}</td>
-                     <td>{{$skill->description}}</td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+
+            <div class="m-portlet__body">
+               <!--begin::Table-->
+               <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>     
+                     @foreach($mission->skills as $skill)
+                     <tr>
+                        <td>{{$skill->name}}</td>
+                        <td>{{$skill->type->name}}</td>
+                        <td>{{$skill->description}}</td>
+                     </tr>
+                     @endforeach
+                  </tbody>
+               </table>
+               <!--end::Table-->
+            </div>
       </div>
    </div>
 </div>

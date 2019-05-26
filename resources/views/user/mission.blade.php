@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">Manage Msissions</h3>
+         <h3 class="m-subheader__title m-subheader__title">Manage your jobs</h3>
       </div>
    </div>
 </div>
@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Mission List
+                        Job List
                      </h3>
                   </div>
                </div>
@@ -33,50 +33,53 @@
                       <a href="{{url('/missions/create')}}" class="btn btn-accent m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
                         <span>
                           <i class="la la-plus"></i>
-                          <span>New Mission</span>
+                          <span>New Job</span>
                         </span>
                       </a>
                     </li>
                   </ul>
                 </div>   
             </div>  
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="mission-table">
-               <thead>
-                  <tr>
-                     <th>Title</th>
-                     <th>Description</th>
-                     <th>Paymnent Type</th>
-                     <th>Price</th>
-                     <th>Start Time</th>
-                     <th>End Time</th>
-                     <th>Created At</th>
-                     <th>Action</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  @foreach(Session::get('user')[0]->missions()->where('activated', '1')->get() as $mission)
-                  <tr>
-                     <td>{{$mission->title}}</td>
-                     <td>{{$mission->description}}</td>
-                     <td>{{$mission->paymnent_type}}</td>
-                     <td>{{$mission->price}}</td>
-                     <td>{{$mission->start_time}}</td>
-                     <td>{{$mission->end_time}}</td>
-                     <td>{{$mission->created_at}}</td>
-                     <td nowrap>
-                        <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
-                        <i class="la la-trash">Detail</i>
-                        </a>
-                        <a href="{{url('/missions/delete/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill delete-mission" title="View">
-                        <i class="la la-trash">Delete</i>
-                        </a>
-                     </td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+
+            <div class="m-portlet__body">
+              <!--begin::Table-->
+              <table class="table table-striped table-bordered table-hover table-checkable" id="mission-table">
+                 <thead>
+                    <tr>
+                       <th>Title</th>
+                       <th>Description</th>
+                       <th>Paymnent Type</th>
+                       <th>Price</th>
+                       <th>Start Time</th>
+                       <th>End Time</th>
+                       <th>Created At</th>
+                       <th>Action</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    @foreach(Session::get('user')[0]->missions()->where('activated', '1')->get() as $mission)
+                    <tr>
+                       <td>{{$mission->title}}</td>
+                       <td>{{$mission->description}}</td>
+                       <td>{{$mission->paymnent_type}}</td>
+                       <td>{{$mission->price}}</td>
+                       <td>{{$mission->start_time}}</td>
+                       <td>{{$mission->end_time}}</td>
+                       <td>{{$mission->created_at}}</td>
+                       <td nowrap>
+                          <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                          <i class="la la-trash">Detail</i>
+                          </a>
+                          <a href="{{url('/missions/delete/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill delete-mission" title="View" style="left: 30%">
+                          <i class="la la-trash">Delete</i>
+                          </a>
+                       </td>
+                    </tr>
+                    @endforeach
+                 </tbody>
+              </table>
+              <!--end::Table-->
+            </div>
          </div>
          <!--end::Portlet-->
          <!--begin::Portlet-->
@@ -88,45 +91,48 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        History List
+                        History Job List
                      </h3>
                   </div>
                </div>
             </div>  
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="history-table">
-               <thead>
-                  <tr>
-                     <th>Title</th>
-                     <th>Description</th>
-                     <th>Paymnent Type</th>
-                     <th>Price</th>
-                     <th>Start Time</th>
-                     <th>End Time</th>
-                     <th>Created At</th>
-                     <th>Action</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  @foreach(Session::get('user')[0]->missions()->where('activated', '0')->get() as $history)
-                  <tr>
-                     <td>{{$history->title}}</td>
-                     <td>{{$history->description}}</td>
-                     <td>{{$history->paymnent_type}}</td>
-                     <td>{{$history->price}}</td>
-                     <td>{{$history->start_time}}</td>
-                     <td>{{$history->end_time}}</td>
-                     <td>{{$history->created_at}}</td>
-                     <td nowrap>
-                        <a href="{{url('/missions/reactive/' . $history->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill reactive-mission" title="View">
-                        <i class="la la-trash">Reactive</i>
-                        </a>
-                     </td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+
+            <div class="m-portlet__body">
+              <!--begin::Table-->
+              <table class="table table-striped table-bordered table-hover table-checkable" id="history-table">
+                 <thead>
+                    <tr>
+                       <th>Title</th>
+                       <th>Description</th>
+                       <th>Paymnent Type</th>
+                       <th>Price</th>
+                       <th>Start Time</th>
+                       <th>End Time</th>
+                       <th>Created At</th>
+                       <th>Action</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    @foreach(Session::get('user')[0]->missions()->where('activated', '0')->get() as $history)
+                    <tr>
+                       <td>{{$history->title}}</td>
+                       <td>{{$history->description}}</td>
+                       <td>{{$history->paymnent_type}}</td>
+                       <td>{{$history->price}}</td>
+                       <td>{{$history->start_time}}</td>
+                       <td>{{$history->end_time}}</td>
+                       <td>{{$history->created_at}}</td>
+                       <td nowrap>
+                          <a href="{{url('/missions/reactive/' . $history->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill reactive-mission" title="View">
+                          <i class="la la-trash">Reactive</i>
+                          </a>
+                       </td>
+                    </tr>
+                    @endforeach
+                 </tbody>
+              </table>
+              <!--end::Table-->
+            </div>
          </div>
          <!--end::Portlet-->
       </div>

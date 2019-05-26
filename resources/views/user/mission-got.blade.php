@@ -7,7 +7,7 @@
 <div class="m-subheader ">
    <div class="d-flex align-items-center">
       <div class="mr-auto">
-         <h3 class="m-subheader__title m-subheader__title">Manage Msissions</h3>
+         <h3 class="m-subheader__title m-subheader__title">Manage Aplly Jobs</h3>
       </div>
    </div>
 </div>
@@ -23,7 +23,7 @@
                      <i class="la la-gear"></i>
                      </span>
                      <h3 class="m-portlet__head-text">
-                        Mission List
+                        Apply status
                      </h3>
                   </div>
                </div>
@@ -39,43 +39,46 @@
                     </li>
                   </ul>
                 </div>   
-            </div>  
-            <!--begin::Table-->
-            <table class="table table-striped table-bordered table-hover table-checkable" id="mission-table">
-               <thead>
-                  <tr>
-                     <th>Title</th>
-                     <th>Owner</th>
-                     <th>Description</th>
-                     <th>Paymnent Type</th>
-                     <th>Price</th>
-                     <th>Start Time</th>
-                     <th>End Time</th>
-                     <th>Created At</th>
-                     <th>Action</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  @foreach(Session::get('user')[0]->gotMissions()->where('activated', '1')->get() as $mission)
-                  <tr>
-                     <td>{{$mission->title}}</td>
-                     <td>{{$mission->user->name}}</td>
-                     <td>{{$mission->description}}</td>
-                     <td>{{$mission->paymnent_type}}</td>
-                     <td>{{$mission->price}}</td>
-                     <td>{{$mission->start_time}}</td>
-                     <td>{{$mission->end_time}}</td>
-                     <td>{{$mission->created_at}}</td>
-                     <td nowrap>
-                        <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
-                        <i class="la la-trash">Detail</i>
-                        </a>
-                     </td>
-                  </tr>
-                  @endforeach
-               </tbody>
-            </table>
-            <!--end::Table-->
+            </div> 
+
+            <div class="m-portlet__body">
+              <!--begin::Table-->
+              <table class="table table-striped table-bordered table-hover table-checkable" id="mission-table">
+                 <thead>
+                    <tr>
+                       <th>Title</th>
+                       <th>Owner</th>
+                       <th>Description</th>
+                       <th>Paymnent Type</th>
+                       <th>Price</th>
+                       <th>Start Time</th>
+                       <th>End Time</th>
+                       <th>Created At</th>
+                       <th>Action</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    @foreach($missions as $mission)
+                    <tr>
+                       <td>{{$mission->title}}</td>
+                       <td>{{$mission->user->name}}</td>
+                       <td>{{$mission->description}}</td>
+                       <td>{{$mission->paymnent_type}}</td>
+                       <td>{{$mission->price}}</td>
+                       <td>{{$mission->start_time}}</td>
+                       <td>{{$mission->end_time}}</td>
+                       <td>{{$mission->created_at}}</td>
+                       <td nowrap>
+                          <a href="{{url('/missions/detail/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                          <i class="la la-trash">Detail</i>
+                          </a>
+                       </td>
+                    </tr>
+                    @endforeach
+                 </tbody>
+              </table>
+              <!--end::Table-->
+            </div>
          </div>
          <!--end::Portlet-->
       </div>

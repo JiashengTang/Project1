@@ -79,7 +79,9 @@ class UserController extends Controller{
 	public function addSkill(){
 		$input = Input::all();
 		$user = User::where('id',Session::get('user')[0]->id)->first();
-		$user->skills()->attach($input['skill-id']);
+		if($user->skills()->where('skill_id', $input['skill-id'])->count() == 0){
+			$user->skills()->attach($input['skill-id']);
+		}
 		return redirect('/skills');
 	}
 
