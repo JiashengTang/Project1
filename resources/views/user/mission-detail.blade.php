@@ -75,7 +75,9 @@
             <!--end::Form-->
          </div>
          <!--end::Portlet-->
-          <!--begin::Portlet-->
+
+         @if(Session::get('user')[0]['id'] == $mission->user->id)
+         <!--begin::Portlet-->
          <div class="m-portlet">
             <div class="m-portlet__head">
                <div class="m-portlet__head-caption">
@@ -155,6 +157,8 @@
             </div>
          </div>
          <!--end::Portlet-->
+         @endif
+
       </div>
    </div>
 </div>

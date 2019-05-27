@@ -368,8 +368,8 @@ var MissionsDatatables = function() {
         // begin first table
         table.DataTable({
             responsive: true,
-            pageLength: 10,
-            order: [6, 'desc']
+            pageLength: 5,
+            order: [2, 'desc']
         });
     };
 
@@ -389,9 +389,13 @@ jQuery(document).ready(function() {
 </script>
 
 <script type="text/javascript">
-  function randomMission(){ 
+  function randomMission(){
+    window.location.reload();
+  }
+
+  function randomColor(){ 
     var colorList = ["#ff0000","blue","gray"];
-    var randomColor = back[Math.floor(Math.random() * colorList.length)];
+    var randomColor = colorList[Math.floor(Math.random() * colorList.length)];
     var price = '{{$randomMission->price}}';
     if(price > 500){
       randomColor = colorList[0];
@@ -410,6 +414,7 @@ jQuery(document).ready(function() {
     }
     $('#random-mission').css('background-color', randomColor);
   }
+  randomColor();
 
   $(document).keydown(function (event) {
     if (event.keyCode == 37) { 
@@ -425,7 +430,6 @@ jQuery(document).ready(function() {
     var href = "{{url('/missions/get')}}/" + randomMissionId;
     window.location.href = href;
   }
-  randomMission();
 
 </script>
 @endsection

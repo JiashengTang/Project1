@@ -69,7 +69,7 @@
                        <td>{{$mission->end_time}}</td>
                        <td>{{$mission->created_at}}</td>
                        <td nowrap>
-                          <a href="{{url('/missions/get/' . $mission->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                          <a href="{{url('/missions/get/' . $mission->id)}}" class="btn m-btn--pill    btn-outline-primary" title="View">
                           <i class="la la-trash">Aplly</i>
                           </a>
                        </td>

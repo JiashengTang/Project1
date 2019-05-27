@@ -4,7 +4,7 @@
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>JobPast</title>
+		<title>JobPost</title>
 		<meta name="robots" content="noindex,nofollow">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" href="{{asset('resources/images/logo.png')}}" />
@@ -72,7 +72,7 @@
 	<!-- end::Head -->
 
 	<!-- begin::Body -->
-	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default" style="background-color: grey">
+	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default" style="background-image: url(resources/images/login_bg.jpg);">
 
 		<!-- begin::Page loader -->
 		<div class="m-page-loader m-page-loader--base">
@@ -205,7 +205,7 @@
 			<!-- END: Header -->
 
 			<!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body" style="background-color: grey">
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body" style="background-image: url(resources/images/login_bg.jpg);">
 				<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-container m-container--responsive m-container--xxl m-container--full-height">
 					<div class="m-grid__item m-grid__item--fluid m-wrapper">
                         @yield('body')
@@ -308,7 +308,7 @@
 		<script src="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.js')}}" type="text/javascript"></script>
 		<script src="{{asset('resources/theme/metronic/vendors/js/framework/components/plugins/base/sweetalert2.init.js')}}" type="text/javascript"></script> -->
 
-		<!--end:: Global Optional Vendors
+		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Bundle -->
 		<script src="{{asset('resources/theme/metronic/assets/demo/base/scripts.bundle.js')}}" type="text/javascript"></script>

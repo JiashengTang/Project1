@@ -7,10 +7,10 @@
 		<title>JobPost</title>
 		<meta name="robots" content="noindex,nofollow">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="{{asset('resources/images/favicon.png')}}" />
+        <link rel="shortcut icon" href="{{asset('resources/images/logo.png')}}" />
         
-		<!--begin::Web font -->
-<!-- 		<script src="{{asset('resources/theme/metronic/assets/app/js/webfont.js')}}"></script>
+				<!--begin::Web font -->
+		<script src="{{asset('resources/theme/metronic/assets/app/js/webfont.js')}}"></script>
 		<script>
 			WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -18,45 +18,45 @@
                 sessionStorage.fonts = true;
             }
           });
-        </script> -->
+        </script>
 
 		<!--end::Web font -->
 
 		<!--begin:: Global Mandatory Vendors -->
-		<!-- <link href="{{asset('resources/theme/metronic/vendors/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css" /> -->
+		<link href="{{asset('resources/theme/metronic/vendors/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css" />
 
 		<!--end:: Global Mandatory Vendors -->
 
 		<!--begin:: Global Optional Vendors -->
-<!-- 		<link href="{{asset('resources/theme/metronic/vendors/tether/dist/css/tether.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('resources/theme/metronic/vendors/tether/dist/css/tether.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-select/dist/css/bootstrap-select.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/select2/dist/css/select2.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/nouislider/distribute/nouislider.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.carousel.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.theme.default.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/nouislider/distribute/nouislider.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.carousel.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/owl.carousel/dist/assets/owl.theme.default.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/dropzone/dist/dropzone.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/summernote/dist/summernote.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/summernote/dist/summernote.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css')}}" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/animate.css/animate.css')}}" rel="stylesheet" type="text/css" /> -->
 		<link href="{{asset('resources/theme/metronic/vendors/toastr/build/toastr.css')}}" rel="stylesheet" type="text/css" />
-<!-- 		<link href="{{asset('resources/theme/metronic/vendors/jstree/dist/themes/default/style.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.min.css')}}" rel="stylesheet" type="text/css" /> -->
+		<link href="{{asset('resources/theme/metronic/vendors/jstree/dist/themes/default/style.css')}}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{asset('resources/theme/metronic/vendors/morris.js/morris.css')}}" rel="stylesheet" type="text/css" /> -->
+		<link href="{{asset('resources/theme/metronic/vendors/chartist/dist/chartist.min.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
-<!-- 		<link href="{{asset('resources/theme/metronic/vendors/socicon/css/socicon.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('resources/theme/metronic/vendors/socicon/css/socicon.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/line-awesome/css/line-awesome.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/flaticon/css/flaticon.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('resources/theme/metronic/vendors/vendors/metronic/css/styles.css')}}" rel="stylesheet" type="text/css" /> -->
+		<link href="{{asset('resources/theme/metronic/vendors/vendors/metronic/css/styles.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('resources/theme/metronic/vendors/vendors/fontawesome5/css/all.min.css')}}" rel="stylesheet" type="text/css" />
-
+		
 		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Styles -->
@@ -64,8 +64,8 @@
 
 		<!--end::Global Theme Styles -->
 
-		<!--begin::Page Vendors Styles --> 
-		<link href="{{asset('resources/community/jqbtk/jqbtk.min.css')}}" rel="stylesheet" type="text/css" />
+		<!--begin::Page Vendors Styles -->
+		@yield('css')
 		<!--end::Page Vendors Styles -->
 	</head>
 
@@ -74,8 +74,8 @@
 
 		<!-- begin:: Page -->
 		<div class="m-grid m-grid--hor m-grid--root m-page">
-			<div class="m-login m-login--signin  m-login--5" id="m_login" style="background-image: url(resources/images/login_bg.jpg);">
-				<div class="m-login__wrapper-1 m-portlet-full-height">
+			<div class="m-login m-login--signin  m-login--5" id="m_login">
+				<div class="m-login__wrapper-1 m-portlet-full-height" style="background-image: url(resources/images/register.png); background-repeat: no-repeat; background-position: center; background-size: 100% 100%; ">
 					<div class="m-login__wrapper-1-1">
 						<div class="m-login__contanier">
 							<div class="m-login__content">
@@ -85,15 +85,9 @@
 									</a>
 								</div>
 								<div class="m-login__title">
-									<!-- <h3>ToFuture</h3> -->
-									<h3>JobPost</h3>
+									<!-- <h3>JobPost</h3> -->
 									<br>
 									<br>
-							        <div id="advertisment-block">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_1.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_2.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							           <img data-lazy-src="{{url('resources/images/advertisement/login/login_3.jpg')}}?v=<?php echo Date("Y.m.d.G.i.s")?>" width="100%">
-							        </div>
 								</div>
 							</div>
 						</div>
@@ -106,7 +100,7 @@
 					<div class="m-login__contanier">
 						<div class="m-login__signin">
 							<div class="m-login__head">
-								<h3 class="m-login__title">Create new user</h3>
+								<h3 class="m-login__title"><strong>Create new user</strong></h3>
 							</div>
 							<form class="m-login__form m-form" method="post" enctype="multipart/form-data">
 		                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -124,23 +118,23 @@
 		                        </div>
 		                        @else
 		                        <div class="form-group m-form__group">
-		                           <input class="form-control m-input m-login__form-input--last" type="email" placeholder="Email" name="email" required>
+		                           <input class="form-control m-input" type="email" placeholder="Email" name="email" required>
 		                        </div>
 		                        <div class="form-group m-form__group">
 		                           <input class="form-control m-input" type="text" placeholder="Name" name="name" autocomplete="off" required>
 		                        </div>
 		                        <div class="form-group m-form__group">
-		                           <input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" required>
+		                           <input class="form-control m-input" type="password" placeholder="Password" name="password" required>
 		                        </div>
 		                        <div class="form-group m-form__group">
-		                           <input class="form-control m-input m-login__form-input--last" type="password" placeholder="Confrim password" name="confirm-password" required>
+		                           <input class="form-control m-input" type="password" placeholder="Confirm password" name="confirm-password" required>
 		                        </div>
 		                        <div class="form-group m-form__group">
 		                           <input class="form-control m-input m-login__form-input--last" type="mobile" placeholder="Mobile" name="mobile" required>
 		                        </div>
 		                        <div class="m-login__form-action">
-		                           <button type="submit" id="register-btn" class="btn m-btn--pill m-btn--air btn-danger">Register</button>
-		                           <a href="{{url('/login')}}" class="btn m-btn--pill m-btn--air btn-danger">Login</a>
+		                           <button type="submit" id="register-btn" class="btn m-btn--pill m-btn--air btn-info">Register</button>
+		                           <a href="{{url('/login')}}" class="btn m-btn--pill m-btn--air btn-danger">Back to login</a>
 		                        </div>
 		                        @endif
 		                    </form>

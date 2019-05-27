@@ -83,7 +83,7 @@
                        <td>{{$skill->type->name}}</td>
                        <td>{{$skill->description}}</td>
                        <td nowrap>
-                          <a href="{{url('/skills/delete/' . $skill->id)}}" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                          <a href="{{url('/skills/delete/' . $skill->id)}}" class="btn m-btn--pill    btn-outline-primary" title="View">
                           <i class="la la-trash">Delete</i>
                           </a>
                        </td>
