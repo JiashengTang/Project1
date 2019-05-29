@@ -104,5 +104,9 @@ var MissionsDatatablesColumnRendering = function() {
         },
     };
 }();
+
+jQuery(document).ready(function() {
+    MissionsDatatablesColumnRendering.init();
+});
 </script>
 @endsection

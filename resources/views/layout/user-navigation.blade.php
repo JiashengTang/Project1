@@ -65,6 +65,11 @@
 		<!--end::Global Theme Styles -->
 
 		<!--begin::Page Vendors Styles -->
+		<style type="text/css">
+	        .html-body {
+	            background-image: url("{{asset('resources/images/login_bg.jpg')}}");
+	        }
+		</style>
 		@yield('css')
 		<!--end::Page Vendors Styles -->
 	</head>
@@ -72,7 +77,7 @@
 	<!-- end::Head -->
 
 	<!-- begin::Body -->
-	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default" style="background-image: url(resources/images/login_bg.jpg);">
+	<body class="m--skin- m-page--loading-enabled m-page--loading m-content--skin-light m-header--fixed m-header--fixed-mobile m-aside-left--offcanvas-default m-aside-left--enabled m-aside-left--fixed m-aside-left--skin-dark m-aside--offcanvas-default html-body">
 
 		<!-- begin::Page loader -->
 		<div class="m-page-loader m-page-loader--base">
@@ -205,7 +210,7 @@
 			<!-- END: Header -->
 
 			<!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body" style="background-image: url(resources/images/login_bg.jpg);">
+			<div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor-desktop m-grid--desktop m-body html-body">
 				<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-container m-container--responsive m-container--xxl m-container--full-height">
 					<div class="m-grid__item m-grid__item--fluid m-wrapper">
                         @yield('body')

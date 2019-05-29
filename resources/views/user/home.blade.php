@@ -331,17 +331,17 @@
 <script type="text/javascript">
 var InitAmountDashBoard = function () {
 var amountDashboard = function () {
-		var e = $("#income-detail");
-		if (0 != e.length) {
-		    var t = {
-		        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-		        datasets: [{
+    var e = $("#income-detail");
+    if (0 != e.length) {
+        var t = {
+            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            datasets: [{
                 label: "$",
-		            backgroundColor: mApp.getColor("danger"),
+                backgroundColor: mApp.getColor("danger"),
                 data: ["2333", "112", "990", "23", "1234", "44", "52", "488", "1853", "2311", "32", "1875"]
-		        }]
-		    };
-		    new Chart(e, {
+            }]
+        };
+        new Chart(e, {
               type: "bar",
                 data: t,
                 options: {
@@ -349,8 +349,8 @@ var amountDashboard = function () {
                         display: !1
                     },
                 }
-		    })
-		}
+        })
+    }
    }
    return {
       init: function() {
@@ -394,19 +394,19 @@ jQuery(document).ready(function() {
   }
 
   function randomColor(){ 
-    var colorList = ["#ff0000","blue","gray"];
+    var colorList = ["yellow","blue","gray","black","red"];
     var randomColor = colorList[Math.floor(Math.random() * colorList.length)];
     var price = '{{$randomMission->price}}';
-    if(price > 500){
+    if(price > 200){
       randomColor = colorList[0];
     }
-    else if(price > 300){
+    else if(price > 100){
       randomColor = colorList[1];
     }
-    else if(price > 100){
+    else if(price > 50){
       randomColor = colorList[2];
     }
-    else if(price > 50){
+    else if(price > 20){
       randomColor = colorList[3];
     }
     else{
