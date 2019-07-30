@@ -157,6 +157,44 @@
             </div>
          </div>
          <!--end::Portlet-->
+         <!--begin::Portlet-->
+         <div class="m-portlet">
+            <div class="m-portlet__head">
+               <div class="m-portlet__head-caption">
+                  <div class="m-portlet__head-title">
+                     <span class="m-portlet__head-icon m--hide">
+                     <i class="la la-gear"></i>
+                     </span>
+                     <h3 class="m-portlet__head-text">
+                       Apply Users List
+                     </h3>
+                  </div>
+               </div>
+            </div>
+            <div class="m-portlet__body">
+               <!--begin::Table-->
+               <table class="table table-striped table-bordered table-hover table-checkable" id="skill-table">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                     </tr>
+                  </thead>
+                  <tbody>     
+                     @foreach($mission->gotUsers as $user)
+                     <tr>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->mobile}}</td>
+                        <td>{{$user->email}}</td>
+                     </tr>
+                     @endforeach
+                  </tbody>
+               </table>
+               <!--end::Table-->
+            </div>
+         </div>
+         <!--end::Portlet-->
          @endif
 
       </div>

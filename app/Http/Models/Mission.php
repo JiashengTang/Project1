@@ -29,6 +29,6 @@ class Mission extends Model
 
     public function gotUsers()
     {
-        return $this->belongsToMany('App\Http\Models\User', 'user_mission', 'mission_id', 'user_id');
+        return $this->belongsToMany('App\Http\Models\User', 'user_got', 'mission_id', 'user_id');
     }
 }

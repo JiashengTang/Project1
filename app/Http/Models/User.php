@@ -32,7 +32,7 @@ class User extends Authenticatable
 
     public function gotMissions()
     {
-        return $this->belongsToMany('App\Http\Models\Mission', 'user_got', 'user_id', 'mission_id');
+        return $this->belongsToMany('App\Http\Models\Mission', 'user_got', 'mission_id', 'user_id');
     }
 
     public function setAttribute($key, $value)
